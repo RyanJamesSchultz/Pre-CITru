@@ -1,6 +1,6 @@
 # Pre-CITru
 
-We present a series of Matlab-based routines, Pre-CITru that were used to do a pre-screening assessment of the risks of induced seismicity from a carbon injection project near the town of Trüllikon, Switzerland.  This repository is related to a study about the same topic [Schultz et al., 2024].  This repository contains programs, scripts, and data to recreate figures and results of the prior study.
+We present a series of Matlab-based routines, Pre-CITru that were used to do a pre-screening assessment of the risks of induced seismicity from a prospective carbon injection project near the town of Trüllikon, Switzerland.  This repository is related to a study about the same topic [Schultz et al., 2024].  This repository contains programs, scripts, and data to recreate figures and results of the prior study.
 
 References: 
             
