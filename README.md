@@ -5,7 +5,7 @@ We present a series of Matlab-based routines, Pre-CITru that were used to do a p
 References: 
             
             R. Schultz, A.P. Rinaldi, P. Roth, T. Gunatilake, H. Madritsch, & S. Wiemer (2024)
-            Inferring maximum magnitudes from the ordered sequence of large earthquakes
+            Pre-screening of induced seismicity risks for CO2 injection at Trüllikon, Switzerland
             International Journal of Greenhouse Gas Control, xx, XX.
             doi: XX.
             
