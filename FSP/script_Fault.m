@@ -1,5 +1,5 @@
 % Script that quantifies the slip potential of faults near Trüllikon.  
-% Used to make Figure 4.
+% Used to make Figures 4 & S2.
 clear;
 
 % Predefine.
@@ -161,22 +161,22 @@ scatter(tM6p(:,1),tM6p(:,3),20,op6,'o','filled');
 plot(TRU1p(:,1),TRU1p(:,3),'-ok','MarkerFaceColor','k');
 xlabel('Fault Parallel Direction (km)'); ylabel('Elevation (km)');
 colormap(cMap);
-%%
+
 % 3D Plot (in N-E-Z coords).
 figure(1); clf;
 plot3(TRU1(:,1),TRU1(:,2),TRU1(:,3),'-ok','MarkerFaceColor','k'); hold on;
-% scatter3(vP1(:,1),vP1(:,2),vP1(:,3),'o','MarkerEdgeColor','b');
-% scatter3(tM1(:,1),tM1(:,2),tM1(:,3),20,op1,'o','filled');
-% scatter3(vP2(:,1),vP2(:,2),vP2(:,3),'o','MarkerEdgeColor','b');
-% scatter3(tM2(:,1),tM2(:,2),tM2(:,3),20,op2,'o','filled');
-% scatter3(vP3(:,1),vP3(:,2),vP3(:,3),'o','MarkerEdgeColor','b');
-% scatter3(tM3(:,1),tM3(:,2),tM3(:,3),20,op3,'o','filled');
-% scatter3(tM3(Ic,1),tM3(Ic,2),tM3(Ic,3),'ob','filled');
-% scatter3(tM3(Is,1),tM3(Is,2),tM3(Is,3),'ob','filled');
-% scatter3(vP4(:,1),vP4(:,2),vP4(:,3),'o','MarkerEdgeColor','#4B0082');
-% scatter3(tM4(:,1),tM4(:,2),tM4(:,3),20,op4,'o','filled');
-% scatter3(vP5(:,1),vP5(:,2),vP5(:,3),'o','MarkerEdgeColor','#4B0082');
-% scatter3(tM5(:,1),tM5(:,2),tM5(:,3),20,op5,'o','filled');
+scatter3(vP1(:,1),vP1(:,2),vP1(:,3),'o','MarkerEdgeColor','b');
+scatter3(tM1(:,1),tM1(:,2),tM1(:,3),20,op1,'o','filled');
+scatter3(vP2(:,1),vP2(:,2),vP2(:,3),'o','MarkerEdgeColor','b');
+scatter3(tM2(:,1),tM2(:,2),tM2(:,3),20,op2,'o','filled');
+scatter3(vP3(:,1),vP3(:,2),vP3(:,3),'o','MarkerEdgeColor','b');
+scatter3(tM3(:,1),tM3(:,2),tM3(:,3),20,op3,'o','filled');
+scatter3(tM3(Ic,1),tM3(Ic,2),tM3(Ic,3),'ob','filled');
+scatter3(tM3(Is,1),tM3(Is,2),tM3(Is,3),'ob','filled');
+scatter3(vP4(:,1),vP4(:,2),vP4(:,3),'o','MarkerEdgeColor','#4B0082');
+scatter3(tM4(:,1),tM4(:,2),tM4(:,3),20,op4,'o','filled');
+scatter3(vP5(:,1),vP5(:,2),vP5(:,3),'o','MarkerEdgeColor','#4B0082');
+scatter3(tM5(:,1),tM5(:,2),tM5(:,3),20,op5,'o','filled');
 scatter3(vP6(:,1),vP6(:,2),vP6(:,3),'o','MarkerEdgeColor','k');
 scatter3(tM6(:,1),tM6(:,2),tM6(:,3),20,op6,'o','filled');
 scatter3(tM6(Ie,1),tM6(Ie,2),tM6(Ie,3),'ob','filled');
@@ -246,14 +246,24 @@ xlabel('Distance (km)'); ylabel('Overpressure (MPa)')
 % Histogram of overpressures at the closest and most susceptbile points of
 % the Neuhausen Fault.
 figure(5); clf;
-subplot(211);
-histogram(opC);
-set(gca,'xscale','log');
-xlabel('Overpressure (MPa)'); ylabel('Counts');
-subplot(212);
-histogram(opS);
-set(gca,'xscale','log');
-xlabel('Overpressure (MPa)'); ylabel('Counts');
+subplot(311);
+histogram(log10(opC)); hold on;
+plot(log10(0.0475)*[1 1], ylim,'--k');
+%set(gca,'xscale','log');
+xlabel('Overpressure required to reactivate closest point on the Neuhausen Fault to TRU1-1 (log_{10}[MPa])'); ylabel('Counts');
+xlim([-3.5 1.0]);
+subplot(312);
+histogram(log10(opS)); hold on;
+plot(log10(0.0260)*[1 1], ylim,'--k');
+%set(gca,'xscale','log');
+xlabel('Overpressure required to reactivate most susceptible point on the Neuhausen Fault (log_{10}[MPa])'); ylabel('Counts');
+xlim([-3.5 1.0]);
+subplot(313);
+histogram(log10(opE)); hold on;
+plot(log10(0.0445)*[1 1], ylim,'--k');
+%set(gca,'xscale','log');
+xlabel('Overpressure required to reactivate close/susceptible point on the N-S fault (log_{10}[MPa])'); ylabel('Counts');
+xlim([-3.5 1.0]);
 
 % Reporting average values of overpressure gradient on the faults.
 disp('Average FSP (NF & BIH-FZ)')
