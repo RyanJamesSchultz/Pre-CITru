@@ -4,7 +4,7 @@ We present a series of Matlab-based routines, Pre-CITru that were used to do a p
 
 References: 
             
-            R. Schultz, A.P. Rinaldi, P. Roth, T. Gunatilake, H. Madritsch, & S. Wiemer (2024)
+            R. Schultz, A.P. Rinaldi, P. Roth, H. Madritsch, T. Gunatilake, & S. Wiemer (2024)
             Pre-screening of induced seismicity risks for CO2 injection at Trüllikon, Switzerland
             International Journal of Greenhouse Gas Control, 138, 104239.
             doi: 10.1016/j.ijggc.2024.104239.
