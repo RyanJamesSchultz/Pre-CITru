@@ -6,8 +6,8 @@ References:
             
             R. Schultz, A.P. Rinaldi, P. Roth, T. Gunatilake, H. Madritsch, & S. Wiemer (2024)
             Pre-screening of induced seismicity risks for CO2 injection at Trüllikon, Switzerland
-            International Journal of Greenhouse Gas Control, xx, XX.
-            doi: XX.
+            International Journal of Greenhouse Gas Control, 138, 104239.
+            doi: 10.1016/j.ijggc.2024.104239.
             
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
